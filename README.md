@@ -17,15 +17,15 @@ Load testing is key to the development of any backend infrastructure because loa
 ### Files
 <ol>
 	<li>
-		<i> jmeter.properties <i>
+		<i> jmeter.properties <i> :
 		Custom property file for JMeter
 	</li>
 	<li>
-		<i>	 launch.sh <i>
+		<i>	 launch.sh <i> :
 	A Shell script file which is required to invoke the JMeter inside the docker container
 	</li>
 	<li>
-		<i>	 smp.jmx <i>
+		<i>	 smp.jmx <i> :
 	This is a sample .jmx file which will be used by jmeter. All the jmeter configuration on testing is included in this file
 	</li>
 </ol>
