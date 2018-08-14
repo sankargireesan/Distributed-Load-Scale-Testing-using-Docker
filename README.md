@@ -25,7 +25,7 @@ Load testing is key to the development of any backend infrastructure because loa
 	A Shell script file which is required to invoke the JMeter inside the docker container
 	</li>
 	<li>
-		<i>	 smp.jmx <i> :
+		<i>	 sample.jmx <i> :
 	This is a sample .jmx file which will be used by jmeter. All the jmeter configuration on testing is included in this file
 	</li>
 </ol>
