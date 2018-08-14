@@ -26,6 +26,6 @@ Load testing is key to the development of any backend infrastructure because loa
 	</li>
 	<li>
 		<i>	 sample.jmx <i> :
-	This is a sample .jmx file which will be used by jmeter. All the jmeter configuration on testing is included in this file
+	This is a sample .jmx file which will be used by jmeter. All the jmeter configuration for load testing is included in this file
 	</li>
 </ol>
