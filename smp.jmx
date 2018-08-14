@@ -1,0 +1,1945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="tenantName" elementType="Argument">
+            <stringProp name="Argument.name">tenantName</stringProp>
+            <stringProp name="Argument.value">${__P(tenant,Tenant90)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accesskey" elementType="Argument">
+            <stringProp name="Argument.name">accesskey</stringProp>
+            <stringProp name="Argument.value">${__P(key,AKIAJ4KDBMDRVX45XYYQ)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="SMP Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
+        <stringProp name="ThreadGroup.delay">5</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="deviceDomainName" elementType="Argument">
+              <stringProp name="Argument.name">deviceDomainName</stringProp>
+              <stringProp name="Argument.value">devicedata-philips-dev.us-east-1.elasticbeanstalk.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="statsDomainName" elementType="Argument">
+              <stringProp name="Argument.name">statsDomainName</stringProp>
+              <stringProp name="Argument.value">statisticsdata-philips-dev.us-east-1.elasticbeanstalk.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="devicePayloads" elementType="Argument">
+              <stringProp name="Argument.name">devicePayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="enterprisePayloads" elementType="Argument">
+              <stringProp name="Argument.name">enterprisePayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="deviceTopologyPayloads" elementType="Argument">
+              <stringProp name="Argument.name">deviceTopologyPayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="monitorDevicePayloads" elementType="Argument">
+              <stringProp name="Argument.name">monitorDevicePayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="devicePlatformPayloads" elementType="Argument">
+              <stringProp name="Argument.name">devicePlatformPayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="deviceSoftwarePayloads" elementType="Argument">
+              <stringProp name="Argument.name">deviceSoftwarePayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="deviceNetworkInterfacePayloads" elementType="Argument">
+              <stringProp name="Argument.name">deviceNetworkInterfacePayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="deviceStatusPayloads" elementType="Argument">
+              <stringProp name="Argument.name">deviceStatusPayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="statsNumericPayloads" elementType="Argument">
+              <stringProp name="Argument.name">statsNumericPayloads</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="proxyServer" elementType="Argument">
+              <stringProp name="Argument.name">proxyServer</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="proxyPort" elementType="Argument">
+              <stringProp name="Argument.name">proxyPort</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Payload Building Simple Controller" enabled="true"/>
+          <hashTree>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Variable Initialization PreProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">int totalHost = 10;
+vars.putObject(&quot;totalHost&quot;, totalHost);
+int totalMonitor = 10;
+vars.putObject(&quot;totalMonitor&quot;, totalMonitor);
+int totalAp = 10;
+vars.putObject(&quot;totalAp&quot;, totalAp);
+vars.putObject(&quot;totalApc&quot;, totalAp);
+vars.putObject(&quot;monitorStartIdx&quot;, totalHost + 1);
+vars.putObject(&quot;totalHostMonitor&quot;, totalHost + totalMonitor);
+vars.putObject(&quot;apStartIdx&quot;, totalHost + totalMonitor + 1);
+vars.putObject(&quot;totalHostMonitorAp&quot;, totalHost + totalMonitor + totalAp);
+vars.putObject(&quot;apcStartIdx&quot;, totalHost + totalMonitor + totalAp + 1);
+vars.putObject(&quot;totalHostMonitorApApc&quot;, totalHost + totalMonitor + totalAp*2);
+
+int totalStats = 1;
+int eachStatsLoop = 8250;
+vars.putObject(&quot;totalStats&quot;, totalStats);
+vars.putObject(&quot;eachStatsLoop&quot;, eachStatsLoop);
+
+String focuspointId = &quot;[{PartNumber:867113, SerialNumber:${tenantName}}]&quot;;
+vars.put(&quot;focuspointId&quot;, focuspointId);
+
+String timestamp = ${__time(&quot;yyyy-MM-dd HH:mm:ss.SSS -04:00&quot;,)};
+vars.put(&quot;hostTimestamp&quot;, timestamp);
+
+vars.put(&quot;entUuid&quot;, &quot;${__UUID}&quot;);
+vars.put(&quot;instUuid&quot;, &quot;${__UUID}&quot;);
+vars.put(&quot;zoneUuid&quot;, &quot;${__UUID}&quot;);
+
+vars.putObject(&quot;deviceStatusIdx&quot;, 0);
+vars.putObject(&quot;timerms&quot;, 0);
+
+String timestamp1 = ${__time(&quot;yyyy-MM-dd HH:mm:ss.SSS -04:00&quot;,)};
+vars.put(&quot;monitorTimestamp&quot;, timestamp1);
+
+String timestamp2 = ${__time(&quot;yyyy-MM-dd HH:mm:ss.SSS -04:00&quot;,)};
+vars.put(&quot;apTimestamp&quot;, timestamp2);
+
+int totalDeviceCount = totalHost + totalMonitor + totalAp*2;
+vars.putObject(&quot;totalDeviceCount&quot;, totalDeviceCount);
+int totalDeviceSoftware = totalDeviceCount*2;
+vars.putObject(&quot;totalDeviceSoftware&quot;, totalDeviceSoftware);
+int totalDeviceNetworkInterface = totalDeviceCount*3;
+vars.putObject(&quot;totalDeviceNetworkInterface&quot;, totalDeviceNetworkInterface);</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="DeviceStatus Payload Building PreProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+//log.info(&quot;DeviceStatus prepre &quot;);
+String timestamp = ${__time(&quot;yyyy-MM-dd HH:mm:ss.SSS -04:00&quot;,)};
+Date date = new Date();
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(date);
+
+totalHost = vars.getObject(&quot;totalHost&quot;);
+totalMonitor = vars.getObject(&quot;totalMonitor&quot;);
+Random rand = new Random();
+int hostDeviceId = rand.nextInt(totalHost) + 1;
+int destDeviceId = rand.nextInt(totalMonitor) + 1;
+int historyId = rand.nextInt(1000000) + 1;
+
+// Concatenate multiple payloads
+String deviceStatusPayload = String.format(&quot;{     \&quot;Input\&quot;: \&quot;deviceStatus\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;HistoryId\&quot;: \&quot;%d\&quot;,     \&quot;IsLatestEntry\&quot;: \&quot;1\&quot;,     \&quot;DeviceId\&quot;: \&quot;%d\&quot;,     \&quot;DestinationDeviceId\&quot;: \&quot;%d\&quot;,     \&quot;ConnectionStatus\&quot;: \&quot;Online\&quot;,     \&quot;PrivateConnectionStatus\&quot;: \&quot;Reporting on time\&quot;,     \&quot;LastReported\&quot;: \&quot;%s\&quot;,     \&quot;LastSeen\&quot;: \&quot;%s\&quot;,     \&quot;UtcLastSeen\&quot;: \&quot;%s\&quot;,     \&quot;IsWatched\&quot;: \&quot;1\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;), historyId, hostDeviceId, destDeviceId, vars.get(&quot;hostTimestamp&quot;), vars.get(&quot;hostTimestamp&quot;), utcTimestamp);
+vars.put(&quot;deviceStatusPayload&quot;, deviceStatusPayload);
+</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Enterprise Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+// Concatenate multiple payloads
+String enterprisePayloadPrefix = String.format(&quot;{     \&quot;Input\&quot;: \&quot;enterprise\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,  \&quot;Id\&quot;: \&quot;&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;));
+String enterprisePayloadSuffix = String.format(&quot;\&quot;,     \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;IsLatestEntry\&quot;: \&quot;1\&quot;,     \&quot;EnterpriseId\&quot;: \&quot;%s\&quot;,     \&quot;EnterpriseName\&quot;: \&quot;Sim Ent-E941-SMP1\&quot;,     \&quot;InstitutionId\&quot;: \&quot;%s\&quot;,     \&quot;InstitutionName\&quot;: \&quot;Sim Inst-E941-SMP10001\&quot;,     \&quot;ZoneId\&quot;: \&quot;%s\&quot;,     \&quot;ZoneName\&quot;: \&quot;Sim Zone-E941-SMP10007\&quot;,     \&quot;ZoneType\&quot;: \&quot;EMPTY\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot; , vars.get(&quot;hostTimestamp&quot;), utcTimestamp, vars.get(&quot;entUuid&quot;), vars.get(&quot;instUuid&quot;), vars.get(&quot;zoneUuid&quot;));
+
+StringBuffer entBuffer = new StringBuffer();
+loop = vars.getObject(&quot;totalHost&quot;);
+for (int i = 0; i &lt; loop; i++) {
+	entBuffer.append( String.format(&quot;%s%d%s%s&quot;, enterprisePayloadPrefix, i, enterprisePayloadSuffix, &quot;;;;&quot;) );
+}
+vars.put(&quot;enterprisePayloads&quot;, entBuffer.toString());</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="DeviceTopology Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+String deviceTopologyPayloadPrefix = String.format(&quot;{    \&quot;Input\&quot;: \&quot;deviceTopology\&quot;,    \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,    \&quot;TenantName\&quot;: \&quot;%s\&quot;,    \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,    \&quot;Id\&quot;: \&quot;&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;));
+String deviceTopologyPayloadBody = String.format(&quot;\&quot;,    \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,    \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,    \&quot;IsLatestEntry\&quot;: \&quot;1\&quot;,    \&quot;DeviceId\&quot;: \&quot;&quot;, vars.get(&quot;hostTimestamp&quot;), utcTimestamp);
+String deviceTopologyPayloadSuffix = String.format(&quot;\&quot;,  \&quot;RelatedDeviceId\&quot;: \&quot;%d\&quot;,    \&quot;Relationship\&quot;: \&quot;Association\&quot;,    \&quot;IsComponent\&quot;: \&quot;0\&quot;,    \&quot;Port\&quot;: \&quot;0\&quot;,    \&quot;SchemaVersion\&quot;: \&quot;A00\&quot; }&quot;, 1);
+
+StringBuffer deviceTopologyBuffer = new StringBuffer();
+loop = vars.getObject(&quot;totalDeviceCount&quot;);
+for (int i = 0; i &lt; loop; i++) {
+	deviceTopologyBuffer.append( String.format(&quot;%s%s%s%d%s%s&quot;, deviceTopologyPayloadPrefix, &quot;${__UUID}&quot;, deviceTopologyPayloadBody, i, deviceTopologyPayloadSuffix, &quot;;;;&quot;) );
+}
+vars.put(&quot;deviceTopologyPayloads&quot;, deviceTopologyBuffer.toString());</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="MonitorDevice Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date())
+
+String monitorDevicePayloadPrefix = String.format(&quot;{     \&quot;Input\&quot;: \&quot;monitorDevice\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;HistoryId\&quot;: \&quot;&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;));
+String monitorDevicePayloadBody = &quot;\&quot;,  \&quot;IsLatestEntry\&quot;: \&quot;1\&quot;,     \&quot;DeviceId\&quot;: \&quot;&quot;;
+String monitorDevicePayloadSuffix = String.format(&quot;\&quot;,   \&quot;AssignedBed\&quot;: \&quot;Bed-Gollum-31\&quot;,     \&quot;IsOnBattery\&quot;: \&quot;1\&quot;,     \&quot;IsBatteryCharging\&quot;: \&quot;1\&quot;,     \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;, vars.get(&quot;hostTimestamp&quot;), utcTimestamp);
+
+StringBuffer monitorDeviceBuffer = new StringBuffer();
+loop = vars.getObject(&quot;totalDeviceCount&quot;);
+for (int i = 0; i &lt; loop; i++) {
+	monitorDeviceBuffer.append( String.format(&quot;%s%s%s%d%s%s&quot;, monitorDevicePayloadPrefix, &quot;${__UUID}&quot;, monitorDevicePayloadBody, i, monitorDevicePayloadSuffix, &quot;;;;&quot;) );
+}
+vars.put(&quot;monitorDevicePayloads&quot;, monitorDeviceBuffer.toString());</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="DevicePlatform Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+String devicePlatformPayloadPrefix = String.format(&quot;{     \&quot;Input\&quot;: \&quot;devicePlatform\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;Id\&quot;: \&quot;&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;));
+String devicePlatformPayloadBody = &quot;\&quot;,     \&quot;DeviceId\&quot;: \&quot;&quot;;
+String devicePlatformPayloadSuffix = String.format(&quot;\&quot;,     \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;IsLatestEntry\&quot;: \&quot;1\&quot;,     \&quot;InternalName\&quot;: \&quot;EMPTY\&quot;,     \&quot;FullyQualifiedDomainName\&quot;: \&quot;EMPTY\&quot;,     \&quot;HardwarePartNumber\&quot;: \&quot;EMPTY\&quot;,     \&quot;HardwareSerialNumber\&quot;: \&quot;EMPTY\&quot;,     \&quot;HardwareModel\&quot;: \&quot;EMPTY\&quot;,     \&quot;HardwareServiceNumber\&quot;: \&quot;EMPTY\&quot;,     \&quot;HardwareManufacturer\&quot;: \&quot;EMPTY\&quot;,     \&quot;HardwareUdi\&quot;: \&quot;EMPTY\&quot;,     \&quot;HardwareRevision\&quot;: \&quot;EMPTY\&quot;,     \&quot;HardwareEdmrDescription\&quot;: \&quot;EMPTY\&quot;,     \&quot;FirmwareRev\&quot;: \&quot;EMPTY\&quot;,     \&quot;SystemId\&quot;: \&quot;EMPTY\&quot;,     \&quot;UniversalUniqueId\&quot;: \&quot;EMPTY\&quot;,     \&quot;VirtualEnvironment\&quot;: \&quot;EMPTY\&quot;,     \&quot;OperatingSystem\&quot;: \&quot;EMPTY\&quot;,     \&quot;SqlVersion\&quot;: \&quot;EMPTY\&quot;,     \&quot;DotNetVersion\&quot;: \&quot;EMPTY\&quot;,     \&quot;DotNetRelease\&quot;: \&quot;0\&quot;,     \&quot;PhilipsOsVersion\&quot;: \&quot;EMPTY\&quot;,     \&quot;InstalledPrograms\&quot;: \&quot;EMPTY\&quot;,     \&quot;IsRebootPending\&quot;: \&quot;0\&quot;,     \&quot;LastBootUpTime\&quot;: \&quot;1900-01-01 00:00:00.000 +00:00\&quot;,     \&quot;CpuCount\&quot;: \&quot;0\&quot;,     \&quot;CpuCurrentMHz\&quot;: \&quot;0\&quot;,     \&quot;CpuMaxMHz\&quot;: \&quot;0\&quot;,     \&quot;MemoryMBytes\&quot;: \&quot;0\&quot;,     \&quot;StorageMBytes\&quot;: \&quot;0\&quot;,     \&quot;DriveModels\&quot;: \&quot;EMPTY\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;, vars.get(&quot;hostTimestamp&quot;), utcTimestamp);
+
+
+StringBuffer devicePlatformBuffer = new StringBuffer();
+loop = vars.getObject(&quot;totalDeviceCount&quot;);
+for (int i = 0; i &lt; loop; i++) {
+	devicePlatformBuffer.append( String.format(&quot;%s%s%s%d%s%s&quot;, devicePlatformPayloadPrefix, &quot;${__UUID}&quot;, devicePlatformPayloadBody, i, devicePlatformPayloadSuffix, &quot;;;;&quot;) );
+}
+vars.put(&quot;devicePlatformPayloads&quot;, devicePlatformBuffer.toString());</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="DeviceSoftware Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+String deviceSoftwarePayloadPrefix = String.format(&quot;{         \&quot;Input\&quot;: \&quot;deviceSoftware\&quot;,         \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,         \&quot;TenantName\&quot;: \&quot;%s\&quot;,         \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,         \&quot;Id\&quot;: \&quot;&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;));
+String deviceSoftwarePayloadBody = String.format(&quot;\&quot;,         \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,         \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,         \&quot;IsLatestEntry\&quot;: \&quot;1\&quot;,         \&quot;DeviceId\&quot;: \&quot;&quot;, vars.get(&quot;hostTimestamp&quot;), utcTimestamp);
+String deviceSoftwarePayloadSuffix =&quot;\&quot;,         \&quot;EdmrDescription\&quot;: \&quot;FocusPoint\&quot;,         \&quot;UserDescription\&quot;: \&quot;FocusPoint\&quot;,         \&quot;Revision\&quot;: \&quot;A.00.10\&quot;,         \&quot;Roles\&quot;: \&quot;Management System\&quot;,    \&quot;Options\&quot;: \&quot;&lt;list&gt;&lt;/list&gt;\&quot;,       \&quot;SerialNumber\&quot;: \&quot;3U0G-6G4T-4\&quot;,         \&quot;PartNumber\&quot;: \&quot;867113\&quot;,         \&quot;ServiceNumber\&quot;: \&quot;EMPTY\&quot;,         \&quot;ProductAssignedDisplayName\&quot;: \&quot;YY105473\&quot;,         \&quot;ProductAssignedLocation\&quot;: \&quot;EMPTY\&quot;,         \&quot;ProductAssignedId\&quot;: \&quot;5471f99c-1243-5f93-8b69-4791996236d4\&quot;,         \&quot;Udi\&quot;: \&quot;EMPTY\&quot;,         \&quot;Language\&quot;: \&quot;EMPTY\&quot;,         \&quot;HeartbeatFrequencyInSeconds\&quot;: \&quot;0\&quot;,         \&quot;ManagedDeviceGroup\&quot;: \&quot;FocusPoint\&quot;,         \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;       }&quot;;
+
+StringBuffer deviceSoftwareBuffer = new StringBuffer();
+loop = vars.getObject(&quot;totalDeviceSoftware&quot;);
+for (int i = 0; i &lt; loop; i++) {
+	deviceSoftwareBuffer.append( String.format(&quot;%s%s%s%d%s%s&quot;, deviceSoftwarePayloadPrefix, &quot;${__UUID}&quot;, deviceSoftwarePayloadBody, i, deviceSoftwarePayloadSuffix, &quot;;;;&quot;) );
+}
+vars.put(&quot;deviceSoftwarePayloads&quot;, deviceSoftwareBuffer.toString());</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="DeviceNetworkInterface Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+String deviceNetworkInterfacePayloadPrefix = String.format(&quot;{     \&quot;Input\&quot;: \&quot;deviceNetworkInterface\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;Id\&quot;: \&quot;&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;));
+String deviceNetworkInterfacePayloadBody = String.format(&quot;\&quot;,     \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;IsLatestEntry\&quot;: \&quot;1\&quot;,     \&quot;DeviceId\&quot;: \&quot;&quot;, vars.get(&quot;hostTimestamp&quot;), utcTimestamp);
+String deviceNetworkInterfacePayloadSuffix = &quot;\&quot;,     \&quot;MacAddress\&quot;: \&quot;D9:33:54:C0:7C:08\&quot;,     \&quot;IpAddress\&quot;: \&quot;230.171.222.37\&quot;,     \&quot;LanAdapter\&quot;: \&quot;SmartHopping\&quot;,     \&quot;SubnetMask\&quot;: \&quot;255.255.255.128\&quot;,     \&quot;Protocol\&quot;: \&quot;Mdil\&quot;,     \&quot;RfAccessCode\&quot;: \&quot;0\&quot;,     \&quot;ConnectedSwitchChassisId\&quot;: \&quot;EMPTY\&quot;,     \&quot;ConnectedSwitchPortId\&quot;: \&quot;EMPTY\&quot;,     \&quot;ConnectedAccessPoint\&quot;: \&quot;AP0002\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;;
+
+StringBuffer deviceNetworkInterfaceBuffer = new StringBuffer();
+loop = vars.getObject(&quot;totalDeviceNetworkInterface&quot;);
+for (int i = 0; i &lt; loop; i++) {
+	deviceNetworkInterfaceBuffer.append( String.format(&quot;%s%s%s%d%s%s&quot;, deviceNetworkInterfacePayloadPrefix, &quot;${__UUID}&quot;, deviceNetworkInterfacePayloadBody, i, deviceNetworkInterfacePayloadSuffix, &quot;;;;&quot;) );
+}
+vars.put(&quot;deviceNetworkInterfacePayloads&quot;, deviceNetworkInterfaceBuffer.toString());</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">500</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">100</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Request JWT Token Controller" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="request device token" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="iamusername" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${tenantName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">iamusername</stringProp>
+                  </elementProp>
+                  <elementProp name="accesskey" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${accesskey}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">accesskey</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/authorize/jwt/token</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="token Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">jwttoken</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$..token</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+                <stringProp name="JSONPostProcessor.defaultValues">Not Authorized</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="request stats token" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="iamusername" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${tenantName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">iamusername</stringProp>
+                  </elementProp>
+                  <elementProp name="accesskey" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${accesskey}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">accesskey</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${statsDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/authorize/jwt/token</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="token Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">statsjwttoken</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$..token</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+                <stringProp name="JSONPostProcessor.defaultValues">Not Authorized</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Host Payload Building Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${totalHost}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="hostIdx" enabled="true">
+              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.end">${totalDeviceCount}</stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">hosti</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Host Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+String devicePayload = String.format(&quot;{     \&quot;Input\&quot;: \&quot;device\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;Id\&quot;: \&quot;%s\&quot;,     \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;Type\&quot;: \&quot;Host\&quot;,     \&quot;TimeRemoved\&quot;: \&quot;EMPTY\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;), vars.get(&quot;hosti&quot;), vars.get(&quot;hostTimestamp&quot;), utcTimestamp);
+//log.info(devicePayload);
+
+String devicePayloads = vars.get(&quot;devicePayloads&quot;);
+devicePayloads = String.format(&quot;%s%s;;;&quot;, devicePayloads, devicePayload);
+vars.put(&quot;devicePayloads&quot;, devicePayloads);</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">50</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">100</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Monitor Payload Building Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${totalMonitor}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="monitortIdx" enabled="true">
+              <stringProp name="CounterConfig.start">${monitorStartIdx}</stringProp>
+              <stringProp name="CounterConfig.end">${totalHostMonitor}</stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">monitori</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Monitor Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+// Concatenate multiple payloads
+String devicePayload = String.format(&quot;{     \&quot;Input\&quot;: \&quot;device\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;Id\&quot;: \&quot;%s\&quot;,     \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;Type\&quot;: \&quot;Monitor\&quot;,     \&quot;TimeRemoved\&quot;: \&quot;EMPTY\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;), vars.get(&quot;monitori&quot;), vars.get(&quot;monitorTimestamp&quot;), utcTimestamp);
+//log.info(devicePayload);
+
+String devicePayloads = vars.get(&quot;devicePayloads&quot;);
+devicePayloads = String.format(&quot;%s%s;;;&quot;, devicePayloads, devicePayload);
+vars.put(&quot;devicePayloads&quot;, devicePayloads);</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">50</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">100</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Ap Payload Building Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${totalAp}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="apIdx" enabled="true">
+              <stringProp name="CounterConfig.start">${apStartIdx}</stringProp>
+              <stringProp name="CounterConfig.end">${totalHostMonitorAp}</stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">api</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Ap Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+// Concatenate multiple payloads
+String devicePayload = String.format(&quot;{     \&quot;Input\&quot;: \&quot;device\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;Id\&quot;: \&quot;%s\&quot;,     \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;Type\&quot;: \&quot;Ap\&quot;,     \&quot;TimeRemoved\&quot;: \&quot;EMPTY\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;), vars.get(&quot;api&quot;), vars.get(&quot;apTimestamp&quot;), utcTimestamp);
+//log.info(devicePayload);
+
+String devicePayloads = vars.get(&quot;devicePayloads&quot;);
+devicePayloads = String.format(&quot;%s%s;;;&quot;, devicePayloads, devicePayload);
+vars.put(&quot;devicePayloads&quot;, devicePayloads);</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">50</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">100</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Apc Payload Building Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${totalApc}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="apcIdx" enabled="true">
+              <stringProp name="CounterConfig.start">${apcStartIdx}</stringProp>
+              <stringProp name="CounterConfig.end">${totalHostMonitorApApc}</stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">apci</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Apc Payload Building PreProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+// Generate UTC TimeStamp
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(new Date());
+
+// Concatenate multiple payloads
+String devicePayload = String.format(&quot;{     \&quot;Input\&quot;: \&quot;device\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;Id\&quot;: \&quot;%s\&quot;,     \&quot;TimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;UtcTimeStamp\&quot;: \&quot;%s\&quot;,     \&quot;Type\&quot;: \&quot;Apc\&quot;,     \&quot;TimeRemoved\&quot;: \&quot;EMPTY\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;), vars.get(&quot;apci&quot;), vars.get(&quot;apTimestamp&quot;), utcTimestamp);
+//log.info(devicePayload);
+
+String devicePayloads = vars.get(&quot;devicePayloads&quot;);
+devicePayloads = String.format(&quot;%s%s;;;&quot;, devicePayloads, devicePayload);
+vars.put(&quot;devicePayloads&quot;, devicePayloads);</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">50</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">100</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="StatsNumeric Payload Building Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${totalStats}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="statsNumericIdx" enabled="true">
+              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.end">${totalStats}</stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">statsi</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="StatsNumeric Payload Building PreProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import java.util.*;
+import java.text.*;
+
+totalMonitor = vars.getObject(&quot;totalMonitor&quot;);
+Random rand = new Random();
+String statsTimestamp = ${__time(&quot;yyyy-MM-dd HH:mm:ss.SSS -04:00&quot;,)};
+String statsUuid = &quot;${__UUID}&quot;;
+int deviceId = rand.nextInt(totalMonitor) + 1;
+int val = rand.nextInt(1000000) + 1;
+
+// Concatenate multiple payloads
+eachStatsLoop = vars.getObject(&quot;eachStatsLoop&quot;);
+StringBuffer statsBuffer = new StringBuffer(&quot;&quot;);
+String statsNumericPayload = String.format(&quot;%s, %s, %d, Philips.PMP.ApplicationHost, %d&quot;, statsTimestamp, statsUuid, deviceId, val);
+for (int i = 0; i &lt; eachStatsLoop; i++) {
+	statsBuffer.append( String.format( &quot;\\n%s&quot;, statsNumericPayload));
+}
+
+String statsNumericPayloads = vars.get(&quot;statsNumericPayloads&quot;);
+statsNumericPayloads = String.format(&quot;%s%s&quot;, statsNumericPayloads, statsBuffer.toString());
+vars.put(&quot;statsNumericPayloads&quot;, statsNumericPayloads);
+
+log.info( String.format( &quot;%s %s Stats Numeric Payload Size: %d&quot;, vars.get(&quot;statsi&quot;), statsTimestamp, statsNumericPayloads.length()) );</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">50</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">100</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Payloads Upload Simple Controller" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="upload device" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="deviceJson" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${devicePayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">deviceJson</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/device</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Device Upload PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">log.info(&quot;Upload Device. Payload Size: &quot; + vars.get(&quot;devicePayloads&quot;).length() );
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="upload enterprise" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="deviceJson" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${enterprisePayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">deviceJson</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/device</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Enterprise Upload PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">log.info(&quot;Upload Enterprise. Payload Size: &quot; + vars.get(&quot;enterprisePayloads&quot;).length());</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="upload devicetopology" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="deviceJson" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${deviceTopologyPayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">deviceJson</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/device</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="DeviceTopology Upload PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">log.info(&quot;Upload Device Topology. Payload Size: &quot; + vars.get(&quot;deviceTopologyPayloads&quot;).length());
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="upload monitordevice" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="deviceJson" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${monitorDevicePayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">deviceJson</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/device</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="MonitorDevice Upload PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">log.info(&quot;Upload Monitor Device. Payload Size: &quot; + vars.get(&quot;monitorDevicePayloads&quot;).length());
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="upload deviceplatform" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="deviceJson" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${devicePlatformPayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">deviceJson</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/device</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="DevicePlatform Upload PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">log.info(&quot;Upload Device Platform. Payload Size: &quot; + vars.get(&quot;devicePlatformPayloads&quot;).length());
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="upload devicesoftware" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="deviceJson" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${deviceSoftwarePayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">deviceJson</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/device</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="DeviceSoftware Upload PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">log.info(&quot;Upload Device Software. Payload Size: &quot; + vars.get(&quot;deviceSoftwarePayloads&quot;).length());
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="upload devicenetworkinterface" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="deviceJson" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${deviceNetworkInterfacePayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">deviceJson</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/device</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="DeviceSoftware Upload PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">log.info(&quot;Upload Device Network Interface. Payload Size: &quot; + vars.get(&quot;deviceNetworkInterfacePayloads&quot;).length());
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="Every one minute upload while Controller" enabled="true">
+            <stringProp name="WhileController.condition">true</stringProp>
+          </WhileController>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">api-version</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="DeviceStatus Payload Building Controller" enabled="true"/>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="DeviceStatus Payload Building PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">import java.util.*;
+import java.text.*;
+
+vars.putObject(&quot;t0&quot;, ${__time(/1000,)});
+log.info(vars.getObject(&quot;deviceStatusIdx&quot;) + &quot; t0=&quot; + vars.getObject(&quot;t0&quot;));
+
+Random rand = new Random();
+monitorTimestamp = vars.get(&quot;monitorTimestamp&quot;);
+boolean alertGen = rand.nextInt(5)&lt;2? true: false;
+vars.putObject(&quot;alertGen&quot;, alertGen);
+
+boolean crashGen = rand.nextInt(101)&lt;6? true: false;
+vars.putObject(&quot;crashGen&quot;, crashGen);
+
+String timestamp = ${__time(&quot;yyyy-MM-dd HH:mm:ss.SSS -04:00&quot;,)};
+Date date = new Date();
+DateFormat gmtFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z&apos;&quot;);
+TimeZone gmtTime = TimeZone.getTimeZone(&quot;GMT&quot;);
+gmtFormat.setTimeZone(gmtTime);
+String utcTimestamp = gmtFormat.format(date);
+vars.put(&quot;utcTimestamp&quot;, utcTimestamp);
+
+totalHost = vars.getObject(&quot;totalHost&quot;);
+totalMonitor = vars.getObject(&quot;totalMonitor&quot;);
+int hostDeviceId = rand.nextInt(totalHost) + 1;
+int destDeviceId = rand.nextInt(totalMonitor) + 1;
+int historyId = rand.nextInt(1000000) + 1;
+vars.putObject(&quot;historyId&quot;, historyId);
+
+// Concatenate multiple payloads
+String deviceStatusPayload = String.format(&quot;{     \&quot;Input\&quot;: \&quot;deviceStatus\&quot;,     \&quot;FocusPointVersion\&quot;: \&quot;A00\&quot;,     \&quot;TenantName\&quot;: \&quot;%s\&quot;,     \&quot;FocusPointId\&quot;: \&quot;%s\&quot;,     \&quot;HistoryId\&quot;: \&quot;%d\&quot;,     \&quot;IsLatestEntry\&quot;: \&quot;1\&quot;,     \&quot;DeviceId\&quot;: \&quot;%d\&quot;,     \&quot;DestinationDeviceId\&quot;: \&quot;%d\&quot;,     \&quot;ConnectionStatus\&quot;: \&quot;Online\&quot;,     \&quot;PrivateConnectionStatus\&quot;: \&quot;Reporting on time\&quot;,     \&quot;LastReported\&quot;: \&quot;%s\&quot;,     \&quot;LastSeen\&quot;: \&quot;%s\&quot;,     \&quot;UtcLastSeen\&quot;: \&quot;%s\&quot;,     \&quot;IsWatched\&quot;: \&quot;1\&quot;,     \&quot;SchemaVersion\&quot;: \&quot;A00\&quot;   }&quot;, vars.get(&quot;tenantName&quot;), vars.get(&quot;focuspointId&quot;), historyId, hostDeviceId, destDeviceId, vars.get(&quot;hostTimestamp&quot;), vars.get(&quot;hostTimestamp&quot;), utcTimestamp);
+
+StringBuffer deviceStatusBuffer = new StringBuffer();
+loop = vars.getObject(&quot;totalDeviceCount&quot;);
+for (int i = 0; i &lt; loop; i++) {
+	deviceStatusBuffer.append( String.format( &quot;%s;;;&quot;, deviceStatusPayload) );
+}
+vars.put(&quot;deviceStatusPayloads&quot;, deviceStatusBuffer.toString());</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">500</stringProp>
+              </TestAction>
+              <hashTree>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                  <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  <stringProp name="RandomTimer.range">100</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload deviceStatus" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="deviceJson" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${deviceStatusPayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">deviceJson</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/device</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="DeviceStatus PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">log.info(vars.getObject(&quot;deviceStatusIdx&quot;) + &quot; Upload DeviceStatus. Payload Size: &quot; + vars.get(&quot;deviceStatusPayloads&quot;).length());</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="DeviceStatus Cleanup PostProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">vars.put(&quot;deviceStatusPayloads&quot;, &quot;&quot;);</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Alert Upload If Controller" enabled="true">
+              <stringProp name="IfController.condition">${alertGen}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload alert" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="alertJson" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{         &quot;Input&quot;: &quot;alert&quot;,         &quot;FocusPointVersion&quot;: &quot;A00&quot;,         &quot;TenantName&quot;: &quot;${tenantName}&quot;,         &quot;FocusPointId&quot;: &quot;${focuspointId}&quot;,         &quot;HistoryId&quot;: &quot;${historyId}&quot;,         &quot;TimeStamp&quot;: &quot;${monitorTimestamp}&quot;,         &quot;UtcTimeStamp&quot;: &quot;${utcTimestamp}&quot;,         &quot;AlertDefinitionHistoryId&quot;: &quot;${historyId}&quot;,         &quot;PrivateId&quot;: &quot;${deviceId}&quot;,         &quot;DeviceId&quot;: &quot;${deviceId}&quot;,         &quot;Message&quot;: &quot;Smart-hopping Access Point Rebooted&quot;,         &quot;Data&quot;: &quot;&lt;Data&gt;&lt;Data Name=\&quot;Previous AP all time Reboots\&quot; Value=\&quot;0.00 \&quot;/&gt;&lt;Data Name=\&quot;Current AP all time Reboots\&quot; Value=\&quot;1.00 \&quot;/&gt;&lt;/Data&gt;&quot;,         &quot;PrivateMessage&quot;: &quot;EMPTY&quot;,         &quot;AffectedDevices&quot;: &quot;EMPTY&quot;,         &quot;Severity&quot;: &quot;Info&quot;,         &quot;IsActive&quot;: &quot;1&quot;,         &quot;SchemaVersion&quot;: &quot;A00&quot;       } </stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">alertJson</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/api/upload/alert</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+                <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>false</xml>
+                      <fieldNames>true</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                      <sentBytes>true</sentBytes>
+                      <threadCounts>true</threadCounts>
+                      <idleTime>true</idleTime>
+                      <connectTime>true</connectTime>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+                <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Alert Upload PreProcessor" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">log.info(vars.getObject(&quot;deviceStatusIdx&quot;) + &quot; Upload Alert&quot;);</stringProp>
+                </JSR223PreProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="CrashSignature Upload If Controller" enabled="true">
+              <stringProp name="IfController.condition">${crashGen}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CrashSignature PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">import java.util.*;
+import java.text.*;
+
+String historyUuid = &quot;${__UUID}&quot;;
+vars.put(&quot;historyUuid&quot;, historyUuid);</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${jwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload crashsignature" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="crashSignatureJson" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{     &quot;Input&quot;: &quot;crashSignature&quot;,     &quot;FocusPointVersion&quot;: &quot;A00&quot;,     &quot;TenantName&quot;: &quot;${tenantName}&quot;,     &quot;FocusPointId&quot;: &quot;${focuspointId}&quot;,     &quot;Id&quot;: &quot;${historyUuid}&quot;,     &quot;CrashSignatureNameId&quot;: &quot;5404&quot;,     &quot;DeviceId&quot;: &quot;8&quot;,     &quot;ProductVersion&quot;: &quot;C.01.02&quot;,     &quot;FileName&quot;: &quot;Philips.SystemTest.RemoteAgent.ActionRunner.Host_Crash_636407013122480194.dmp&quot;,     &quot;HashCode&quot;: &quot;630F87212C8507407EB74FB604CB41F4EC079573712F81ABBD5F496EE69F6D43&quot;,     &quot;ProcessName&quot;: &quot;EMPTY&quot;,     &quot;DllName&quot;: &quot;EMPTY&quot;,     &quot;UtcTimeStamp&quot;: &quot;${utcTimestamp}&quot;,     &quot;TimeStamp&quot;: &quot;${hostTimestamp}&quot;,     &quot;SchemaVersion&quot;: &quot;A00&quot;   }</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">crashSignatureJson</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${deviceDomainName}</stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/api/upload/crashSignature</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+                <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>false</xml>
+                      <fieldNames>true</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                      <sentBytes>true</sentBytes>
+                      <threadCounts>true</threadCounts>
+                      <idleTime>true</idleTime>
+                      <connectTime>true</connectTime>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+                <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CrashSignature Upload PreProcessor" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">log.info(&quot;Upload Crash Signature&quot;);</stringProp>
+                </JSR223PreProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload StatsNumeric" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="tenantName" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${tenantName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">tenantName</stringProp>
+                  </elementProp>
+                  <elementProp name="statisticData" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${statsNumericPayloads}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">statisticData</stringProp>
+                  </elementProp>
+                  <elementProp name="version" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">A00</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">version</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${statsDomainName}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/upload/statNumeric</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.proxyHost">${proxyServer}</stringProp>
+              <stringProp name="HTTPSampler.proxyPort">${proxyPort}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">api-version</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${statsjwttoken}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="StatsNumeric PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">log.info(vars.getObject(&quot;deviceStatusIdx&quot;) + &quot; Upload StatsNumeric. Payload Size: &quot; + vars.get(&quot;statsNumericPayloads&quot;).length());</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="StatsNumeric PostProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">int t3 = ${__time(/1000,)};
+t0 = vars.getObject(&quot;t0&quot;);
+int lapse = (int)t3 - (int)t0;
+
+int timerms = Math.max(60000 - lapse * 1000, 0);
+vars.putObject(&quot;timerms&quot;, timerms);
+
+dsIndex = vars.getObject(&quot;deviceStatusIdx&quot;);
+vars.putObject(&quot;deviceStatusIdx&quot;, dsIndex + 1);
+
+log.info(&quot;Done Uploading StatsNumeric&quot;);</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+            </hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">${timerms}</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">100</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <boolProp name="ResultCollector.success_only_logging">true</boolProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
